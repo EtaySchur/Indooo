@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_layout"
+    tools:context=".MainActivity" >
+     
+    <Button
+        android:id="@+id/logOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:onClick="logOut"
+        android:text="@string/logout_button" />
+
+    <Button
+        android:id="@+id/create_button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/logOut"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/logOut"
+        android:onClick="qrScan"
+        android:text="@string/create_button" />
+
+    <Button
+        android:id="@+id/doneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/create_button1"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/create_button1"
+        android:onClick="Done"
+        android:text="@string/done_button" />
+
+   
+
+    <Button
+        android:id="@+id/del_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/doneButton"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/doneButton"
+        android:onClick="delMarker"
+        android:text="@string/del_button" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:focusable="true"
+        android:hint="No description"
+        android:text="@string/edit_location" >
+
+        <requestFocus />
+    </EditText>
+    
+    <ImageView
+        android:id="@+id/mapView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/main_text_view"
+      
+        android:layout_toLeftOf="@+id/create_button1"
+      
+        android:src="@drawable/se_map" />
+
+    <Button
+        android:id="@+id/createNewMarkerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/doneButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/create_button1"
+        android:layout_toRightOf="@+id/mapView1"
+        android:onClick="createNewMarker"
+        android:text="@string/createNewMarker" />
+
+    <TextView
+        android:id="@+id/main_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_above="@+id/editText1"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/del_button"
+        android:ems="10" />
+
+</RelativeLayout>
